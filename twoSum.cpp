@@ -1,4 +1,4 @@
-#include <iostream>
+// https://leetcode.com/problems/two-sum/
 #include <vector>
 #include <algorithm>
 
@@ -8,9 +8,10 @@ struct Data
 {
     int val;
     int index;
-}
+};
 
-bool compareData(Data const &data1, Data const &data2)
+bool
+compareData(Data const &data1, Data const &data2)
 {
     return data1.val < data2.val;
 }
@@ -60,6 +61,5 @@ vector<int> twoSum(vector<int> &nums, int target)
 
 int main()
 {
-    cout << "Two Sum";
     return 0;
 }
