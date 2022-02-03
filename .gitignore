@@ -33,3 +33,4 @@
 
 # vscode compile json
 *.json
+*.DS_Store
