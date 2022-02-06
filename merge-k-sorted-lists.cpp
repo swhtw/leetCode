@@ -17,7 +17,15 @@ struct ListNode
 
 bool listNodeCompare(ListNode *const &listNode1, ListNode *const &listNode2)
 {
-    return listNode1->val < listNode2->val;
+    if (listNode1 == nullptr)
+    {
+        return false;
+    }
+    if (listNode2 == nullptr)
+    {
+        return true;
+    }
+    return listNode1->val > listNode2->val;
 }
 
 ListNode *mergeKLists(vector<ListNode *> &lists)
@@ -26,25 +34,43 @@ ListNode *mergeKLists(vector<ListNode *> &lists)
     {
         return nullptr;
     }
+    std::make_heap(lists.begin(), lists.end(), &listNodeCompare);
     ListNode *result = nullptr;
     ListNode *resultFront = nullptr;
-    std::make_heap(lists.begin(), lists.end(), &listNodeCompare);
-    result = resultFront = *lists.begin();
     while (!lists.empty())
     {
-        if (*lists.begin() != nullptr)
+        std::pop_heap(lists.begin(), lists.end(), &listNodeCompare);
+        if (lists.back() != nullptr)
         {
-            result->next = *lists.begin();
-            result = result->next;
-            *lists.begin() = (*lists.begin())->next;
+            if (resultFront == nullptr)
+            {
+                result = resultFront = lists.back();
+            }
+            else
+            {
+                result->next = lists.back();
+                result = result->next;
+            }
+        }
+        if (lists.back() != nullptr)
+        {
+            lists.back() = lists.back()->next;
+            if (lists.back() != nullptr)
+            {
+                std::push_heap(lists.begin(), lists.end(), &listNodeCompare);
+            }
+            else
+            {
+                lists.pop_back();
+            }
         }
         else
         {
-            lists.erase(lists.begin());
+            lists.pop_back();
         }
-        std::make_heap(lists.begin(), lists.end(), &listNodeCompare);
     }
     return resultFront;
+}
 }
 
 int main()
