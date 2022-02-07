@@ -1,7 +1,6 @@
 //https://leetcode.com/problems/longest-substring-without-repeating-characters/
-#include <string>
+#include "Utility.h"
 #include <unordered_map>
-#include <vector>
 
 using namespace std;
 
@@ -53,10 +52,4 @@ int lengthOfLongestSubstring1(string s)
         table[s[i]] = i;
     }
     return maxResult;
-}
-
-int main()
-{
-    lengthOfLongestSubstring("abbcdea");
-    return 0;
 }

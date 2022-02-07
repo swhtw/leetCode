@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/
-#include "Utility.cpp"
-#include <iostream>
-#include <algorithm>
-#include <vector>
+#include "Utility.h"
 
 double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
 {
@@ -92,21 +89,4 @@ double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2)
         result = (double)(*(mergeVector.begin() + (targetIndex - lowerIndex)) + *(mergeVector.begin() + (targetIndex - lowerIndex + 1))) / 2.0;
     }
     return result;
-}
-
-int main()
-{
-    cout << "Hello, world!" << endl;
-    vector<int> nums1; // randomVector(10, 1, true);
-    nums1.push_back(1);
-    nums1.push_back(6);
-    nums1.push_back(7);
-    vector<int> nums2; // randomVector(10, 2, true);
-    nums2.push_back(2);
-    nums2.push_back(3);
-    nums2.push_back(4);
-    nums2.push_back(5);
-    nums2.push_back(8);
-    findMedianSortedArrays(nums1, nums2);
-    return 0;
 }

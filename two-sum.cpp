@@ -1,8 +1,5 @@
 // https://leetcode.com/problems/two-sum/
-#include <vector>
-#include <algorithm>
-
-using namespace std;
+#include "Utility.h"
 
 struct Data
 {
@@ -57,9 +54,4 @@ vector<int> twoSum(vector<int> &nums, int target)
         }
     }
     return result;
-}
-
-int main()
-{
-    return 0;
 }

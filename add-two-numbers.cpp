@@ -1,21 +1,9 @@
 // https://leetcode.com/problems/add-two-numbers/
-//#include
-
-//Definition for singly-linked list.
-struct ListNode
-{
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
-
-using namespace std;
+#include "Utility.h"
 
 ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
 {
-    ListNode *result = l1, *l1Prev, *l2Prev;
+    ListNode *result = l1, *l1Prev = nullptr, *l2Prev = nullptr;
     int summery = 0;
     while (l1 && l2)
     {
@@ -47,9 +35,4 @@ ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
         l1Prev->next = addNode;
     }
     return result;
-}
-
-int main()
-{
-    return 0;
 }
