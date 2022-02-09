@@ -9,14 +9,13 @@ using namespace std;
 
 void test(string s)
 {
-	cout << s;
+	cout << s << endl;
 }
 
 vector<int> randomVector(int size, int seed, bool needSort)
 {
     srand(seed);
     vector<int> v;
-    generate(v.begin(), v.end(), std::rand);
 	for (int i = 0; i < size; ++i)
 	{
 		v.push_back(rand() % size * 2);
@@ -26,4 +25,30 @@ vector<int> randomVector(int size, int seed, bool needSort)
         sort(v.begin(), v.end());
     }
     return v;
+}
+
+ListNode *randomList(int size, int seed)
+{
+	srand(seed);
+	ListNode * next = nullptr;
+	for (int i = 0; i < size; ++i)
+	{
+		ListNode *listNode = new ListNode(rand() % size * 2, next);
+		next = listNode;
+	}
+	return next;
+}
+
+ListNode *randomSortedList(int size, int seed)
+{
+	int minNum = 0;
+	srand(seed);
+	ListNode * next = nullptr;
+	for (int i = 0; i < size; ++i)
+	{
+		minNum += rand() % 5;
+		ListNode *listNode = new ListNode(minNum, next);
+		next = listNode;
+	}
+	return next;
 }
