@@ -26,8 +26,7 @@ int lengthOfLongestSubstring(string s);
 double findMedianSortedArrays(vector<int> &nums1, vector<int> &nums2);
 ListNode *mergeKLists(vector<ListNode *> &lists);
 vector<int> twoSum(vector<int> &nums, int target);
-
-bool isPalindrome(string s);
 string longestPalindrome(string s);
+string zigzag_conversion(string s, int numRows);
 
 #endif

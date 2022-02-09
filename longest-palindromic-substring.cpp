@@ -1,17 +1,6 @@
 // https://leetcode.com/problems/longest-palindromic-substring/
 #include "Utility.h"
 
-bool isPalindrome(string s) {
-	for (int i = 0, j = s.length() - 1; i <= j; ++i, --j)
-	{
-		if (s[i] != s[j])
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
 string longestPalindrome(string s) {
 	if (s.length() <= 1)
 	{
@@ -25,7 +14,7 @@ string longestPalindrome(string s) {
 	{
 		counter[i].push_back(0);
 		counter[i].push_back(1);
-		
+
 		for (int j = 0; j < counter[i - 1].size(); ++j)
 		{
 			if (s[i] == s[i - 1 - counter[i - 1][j]])
