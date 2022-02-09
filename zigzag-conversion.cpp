@@ -40,5 +40,3 @@ string zigzag_conversion(string s, int numRows) {
 	}
 	return result;
 }
-
-//PAHNAPLSIIGYIR

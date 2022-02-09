@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 
 using namespace std;
 
@@ -28,5 +29,6 @@ ListNode *mergeKLists(vector<ListNode *> &lists);
 vector<int> twoSum(vector<int> &nums, int target);
 string longestPalindrome(string s);
 string zigzag_conversion(string s, int numRows);
+int reverse_integer(int x);
 
 #endif
