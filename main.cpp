@@ -8,7 +8,7 @@ int main()
 {
 	test("Hello, world!");
 	//cout << longestPalindrome("abccccvvvsd000");
-	cout << reverse_integer(1534236469);
+	cout << myAtoi("000-123sdf");
 
 	//vector<int> v1 = randomVector(3, 5, true);
 	//vector<int> v2 = randomVector(2, 2, true);

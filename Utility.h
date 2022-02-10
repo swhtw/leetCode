@@ -4,6 +4,8 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+#include <regex>
+#include <sstream>
 
 using namespace std;
 
@@ -30,5 +32,6 @@ vector<int> twoSum(vector<int> &nums, int target);
 string longestPalindrome(string s);
 string zigzag_conversion(string s, int numRows);
 int reverse_integer(int x);
+int myAtoi(string s);
 
 #endif
