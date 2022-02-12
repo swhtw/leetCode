@@ -6,6 +6,7 @@
 #include <cmath>
 #include <regex>
 #include <sstream>
+#include <stack>
 
 using namespace std;
 
@@ -19,7 +20,6 @@ struct ListNode
 	ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-void test(string s);
 vector<int> randomVector(int size, int seed, bool needSort);
 ListNode *randomList(int size, int seed);
 ListNode *randomSortedList(int size, int seed);
@@ -33,5 +33,7 @@ string longestPalindrome(string s);
 string zigzag_conversion(string s, int numRows);
 int reverse_integer(int x);
 int myAtoi(string s);
+bool isPalindrome(int x);
+bool isMatch(string s, string p);
 
 #endif

@@ -7,11 +7,6 @@
 
 using namespace std;
 
-void test(string s)
-{
-	cout << s << endl;
-}
-
 vector<int> randomVector(int size, int seed, bool needSort)
 {
     srand(seed);
