@@ -35,5 +35,7 @@ int reverse_integer(int x);
 int myAtoi(string s);
 bool isPalindrome(int x);
 bool isMatch(string s, string p);
+int maxArea(vector<int>& height);
+int mincostTickets(vector<int>& days, vector<int>& costs);
 
 #endif

@@ -12,7 +12,7 @@ int reverse_integer(int x) {
 		if (buf > 0)
 		{
 			result *= 10;
-			if (-2147483648 > result || result > 2147483647)
+			if (INT_MIN > result || result > INT_MAX)
 			{
 				return 0;
 			}

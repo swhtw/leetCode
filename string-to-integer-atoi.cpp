@@ -36,14 +36,14 @@ int myAtoi(string s) {
 			{
 				phase = 2;
 				result = result * 10 + (isNative ? (-s[i] + '0') : (s[i] - '0'));
-				if (result > 2147483647)
+				if (result > INT_MAX)
 				{
-					result = 2147483647;
+					result = INT_MAX ;
 					break;
 				}
-				else if (result < -2147483648)
+				else if (result < INT_MIN)
 				{
-					result = -2147483648;
+					result = INT_MIN;
 					break;
 				}
 			}
@@ -71,13 +71,13 @@ int myAtoi1(string s) {
 		data = regex_replace(data, e, "$2");
 		ss << data;
 		ss >> result;
-		if (result > 2147483647)
+		if (result > INT_MAX)
 		{
-			result = 2147483647;
+			result = INT_MAX ;
 		}
-		else if (result < -2147483648)
+		else if (result < INT_MIN)
 		{
-			result = -2147483648;
+			result = INT_MIN;
 		}
 	}
 	return result;
