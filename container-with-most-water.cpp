@@ -23,7 +23,7 @@ int maxArea(vector<int>& height) {
 	return result;
 }
 
-int maxArea(vector<int>& height) {
+int maxArea1(vector<int>& height) {
 	int result = 0;
 	vector<int>::iterator l = height.begin();
 	vector<int>::iterator r = height.end() - 1;

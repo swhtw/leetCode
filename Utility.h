@@ -7,6 +7,7 @@
 #include <regex>
 #include <sstream>
 #include <stack>
+#include <set>
 
 using namespace std;
 
@@ -37,5 +38,7 @@ bool isPalindrome(int x);
 bool isMatch(string s, string p);
 int maxArea(vector<int>& height);
 int mincostTickets(vector<int>& days, vector<int>& costs);
+string intToRoman(int num);
+vector<vector<int>> threeSum(vector<int>& nums);
 
 #endif
