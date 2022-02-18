@@ -8,6 +8,7 @@
 #include <sstream>
 #include <stack>
 #include <set>
+#include <numeric>
 
 using namespace std;
 
@@ -40,5 +41,6 @@ int maxArea(vector<int>& height);
 int mincostTickets(vector<int>& days, vector<int>& costs);
 string intToRoman(int num);
 vector<vector<int>> threeSum(vector<int>& nums);
+int threeSumClosest(vector<int>& nums, int target);
 
 #endif
