@@ -27,8 +27,8 @@ ListNode *randomList(int size, int seed);
 ListNode *randomSortedList(int size, int seed);
 
 vector<vector<int>> threeSum(vector<int>& nums);
-vector<vector<int>> fourSum(vector<int>& nums, int target);
 int threeSumClosest(vector<int>& nums, int target);
+vector<vector<int>> fourSum(vector<int>& nums, int target);
 ListNode *addTwoNumbers(ListNode *l1, ListNode *l2);
 int maxArea(vector<int>& height);
 string intToRoman(int num);
