@@ -6,8 +6,10 @@ using namespace std;
 
 int main()
 {
-	vector<int> input{ 1,1,1,1 };
-	int target = 0;
-	cout << threeSumClosest(input, target);
+	string test = "23";
+	letterCombinations(test);
+
+	vector<int> input{ 1,0,-1,0,-2,2 };
+	fourSum(input, 0);
 	return 0;
 }
