@@ -113,9 +113,17 @@ long long coutPairs(vector<int>& nums, int k) {
 	long long result = 0;
 	for (int i = 0; i < nums.size(); ++i)
 	{
-		result += cnt[k / gcd(k, nums[i])]; // result计秖 k 籔 nums 程そ计
-		for (auto j : a)
-			cnt[j] += nums[i] % j == 0;
+		// k = gcd * p
+		// num[i] = gcd * q
+		// result += p计秖
+		result += cnt[k / gcd(k, nums[i])]; // result计秖 k / (k 籔 nums[i] 程そ计)pair计秖
+		for (int j = 0; j < a.size(); ++j)
+		{
+			if (nums[i] % a[j] == 0)
+			{
+				++cnt[a[j]]; // ┮Τq计计秖+1
+			}
+		}
 	}
 	return result;
 }
