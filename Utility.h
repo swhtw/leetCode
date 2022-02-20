@@ -31,6 +31,8 @@ int threeSumClosest(vector<int>& nums, int target);
 vector<vector<int>> fourSum(vector<int>& nums, int target);
 ListNode *addTwoNumbers(ListNode *l1, ListNode *l2);
 int maxArea(vector<int>& height);
+int divide(int dividend, int divisor);
+vector<string> generateParenthesis(int n);
 string intToRoman(int num);
 vector<string> letterCombinations(string digits);
 string longestPalindrome(string s);
@@ -44,6 +46,12 @@ bool isMatch(string s, string p);
 ListNode* removeNthFromEnd(ListNode* head, int n);
 int reverse_integer(int x);
 int myAtoi(string s);
+ListNode* swapPairs(ListNode* head);
 vector<int> twoSum(vector<int> &nums, int target);
 string zigzag_conversion(string s, int numRows);
+// 281st LeetCode Weekly Contest
+int countEven(int num);
+ListNode* mergeNodes(ListNode* head);
+string repeatLimitedString(string s, int repeatLimit);
+long long coutPairs(vector<int>& nums, int k);
 #endif
