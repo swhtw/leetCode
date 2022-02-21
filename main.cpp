@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-	vector<int> nums{ 1,2,3,4,5 };
-	cout << coutPairs(nums, 2);
+	ListNode * input = randomSortedList(6);
+	reverseKGroup(input, 5);
 	return 0;
 }

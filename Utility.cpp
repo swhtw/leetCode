@@ -47,3 +47,14 @@ ListNode *randomSortedList(int size, int seed)
 	}
 	return next;
 }
+
+ListNode *randomSortedList(int size)
+{
+	ListNode * next = nullptr;
+	for (int i = 0; i < size; ++i)
+	{
+		ListNode *listNode = new ListNode(size - i, next);
+		next = listNode;
+	}
+	return next;
+}

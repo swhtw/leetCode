@@ -25,6 +25,7 @@ struct ListNode
 vector<int> randomVector(int size, int seed, bool needSort);
 ListNode *randomList(int size, int seed);
 ListNode *randomSortedList(int size, int seed);
+ListNode *randomSortedList(int size);
 
 vector<vector<int>> threeSum(vector<int>& nums);
 int threeSumClosest(vector<int>& nums, int target);
@@ -45,6 +46,7 @@ bool isPalindrome(int x); // palindrome-number
 bool isMatch(string s, string p);
 ListNode* removeNthFromEnd(ListNode* head, int n);
 int reverse_integer(int x);
+ListNode* reverseKGroup(ListNode* head, int k);
 int myAtoi(string s);
 ListNode* swapPairs(ListNode* head);
 vector<int> twoSum(vector<int> &nums, int target);
