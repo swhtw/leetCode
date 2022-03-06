@@ -6,7 +6,8 @@ using namespace std;
 
 int main()
 {
-	ListNode * input = randomSortedList(6);
-	reverseKGroup(input, 5);
+	vector<int> nums = { 1 };
+	int k = 1000000000;
+	minimalKSum(nums, k);
 	return 0;
 }

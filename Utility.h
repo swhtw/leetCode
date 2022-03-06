@@ -48,6 +48,7 @@ ListNode* removeNthFromEnd(ListNode* head, int n);
 int reverse_integer(int x);
 ListNode* reverseKGroup(ListNode* head, int k);
 int myAtoi(string s);
+vector<int> findSubstring(string s, vector<string>& words);
 ListNode* swapPairs(ListNode* head);
 vector<int> twoSum(vector<int> &nums, int target);
 string zigzag_conversion(string s, int numRows);
@@ -56,4 +57,9 @@ int countEven(int num);
 ListNode* mergeNodes(ListNode* head);
 string repeatLimitedString(string s, int repeatLimit);
 long long coutPairs(vector<int>& nums, int k);
+// 283st LeetCode Weekly Contest
+
+long long minimalKSum(vector<int>& nums, int k);
+
+
 #endif
