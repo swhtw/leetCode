@@ -9,6 +9,7 @@
 #include <stack>
 #include <set>
 #include <numeric>
+#include <unordered_map>
 
 using namespace std;
 
@@ -47,6 +48,7 @@ bool isMatch(string s, string p);
 ListNode* removeNthFromEnd(ListNode* head, int n);
 int reverse_integer(int x);
 ListNode* reverseKGroup(ListNode* head, int k);
+int search(vector<int>& nums, int target);
 int myAtoi(string s);
 vector<int> findSubstring(string s, vector<string>& words);
 ListNode* swapPairs(ListNode* head);
@@ -58,7 +60,7 @@ ListNode* mergeNodes(ListNode* head);
 string repeatLimitedString(string s, int repeatLimit);
 long long coutPairs(vector<int>& nums, int k);
 // 283st LeetCode Weekly Contest
-
+vector<string> cellsInRange(string s);
 long long minimalKSum(vector<int>& nums, int k);
 
 

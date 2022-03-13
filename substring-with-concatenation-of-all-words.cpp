@@ -1,40 +1,51 @@
 // https://leetcode.com/problems/substring-with-concatenation-of-all-words/
 #include "Utility.h"
 
-struct WordIndex
-{
-	int length;
-	vector<int> index;
-};
-
-bool compare(WordIndex const &left, WordIndex const &right)
-{
-	return left.index[0] > right.index[0];
-}
-
 vector<int> findSubstring(string s, vector<string>& words) {
-	vector<int> result = {};
+	if (s.empty() || words.empty()) return {};
 
-	vector<WordIndex> wordIndex(words.size());
+	unordered_map<string, int> wordsCount;
+	int sumLength = 0;
 	for (int i = 0; i < words.size(); ++i)
 	{
-		wordIndex[i].length = words[i].length();
-		string buf = s;
-		int offset = 0;
-		size_t foundIndex = buf.find(words[i]);
-		while (foundIndex != std::string::npos)
-		{
-			wordIndex[i].index.push_back(offset + foundIndex);
-			offset += (foundIndex + 1);
-			buf = buf.substr(foundIndex + 1);
-			foundIndex = buf.find(words[i]);
-		}
-		if (wordIndex[i].index.size() == 0)
-		{
-			return result;
-		}
+		sumLength += words[i].length();
+		++wordsCount[words[i]];
 	}
-	std::sort(wordIndex.begin(), wordIndex.end(), &compare);
-	std::make_heap(wordIndex.begin(), wordIndex.end(), &compare);
+	vector<int> result = {};
+	int i = 0;
+	int limitSize = (int)(s.length()) - sumLength;
+	while (i <= limitSize)
+	{
+		unordered_map<string, int> wordsCountBuf = wordsCount;
+		bool flag = false;
+		int j = 0;
+		do
+		{
+			flag = false;
+			for (unordered_map<string, int>::iterator it = wordsCountBuf.begin(); it != wordsCountBuf.end(); ++it)
+			{
+				if (it->second == 0)
+				{
+					continue;
+				}
+				else if (s.substr(i + j, it->first.length()) == it->first)
+				{
+					--it->second;
+					j += it->first.length();
+					flag = true;
+					break;
+				}
+			}
+			if (j == sumLength)
+			{
+				break;
+			}
+		} while (flag);
+		if (flag)
+		{
+			result.push_back(i);
+		}
+		++i;
+	}
 	return result;
 }

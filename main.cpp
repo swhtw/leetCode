@@ -6,8 +6,11 @@ using namespace std;
 
 int main()
 {
-	vector<int> nums = { 1 };
-	int k = 1000000000;
-	minimalKSum(nums, k);
+
+	//"wordgoodgoodgoodbestword"
+//["word", "good", "best", "good"]
+	string s = "wordgoodgoodgoodbestword";
+	vector<string> words = { "word", "good", "best", "good" };
+	findSubstring(s, words);
 	return 0;
 }
