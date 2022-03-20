@@ -1,6 +1,5 @@
 // https://leetcode.com/contest/weekly-contest-283/
 #include "Utility.h"
-#include <iostream>
 
 vector<string> cellsInRange(string s) {
 	vector<string> result;
